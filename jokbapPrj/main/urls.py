@@ -8,4 +8,5 @@ urlpatterns = [
     path('bpage/',views.bpage, name="b_page"),
     path('jpage/content',views.jContent, name="Content_Jok"),
     path('bpage/content',views.bContent,name="Content_Bap"),
+    path('jpage/create_jokbo',views.createJokbo,name='new'), #족보판매글 작성
 ]

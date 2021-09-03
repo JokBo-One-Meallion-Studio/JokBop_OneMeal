@@ -125,7 +125,8 @@ STATICFILES_DIRS=[
     os.path.join(BASE_DIR,'main','static')
 ]
 STATIC_ROOT=os.path.join(BASE_DIR,'static')
-
+MEDIA_ROOT=os.path.join(BASE_DIR,'meida') #이용자가 업로드한 media파일을 모으는 곳    
+MEDIA_URL='/media/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 

@@ -17,3 +17,6 @@ def bContent(request):
 
 def jContent(request):
     return render(request, 'Content_Jok.html')
+
+def createJokbo(request):
+    return render(request,'newJokbo.html')

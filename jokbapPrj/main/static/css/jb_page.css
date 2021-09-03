@@ -130,3 +130,8 @@ a:hover {
 .gray {
   color: #dbdbdb;
 }
+
+.create_btn img{
+  width:46px;
+  height:46px;
+}

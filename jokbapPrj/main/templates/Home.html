@@ -26,10 +26,10 @@
             <img id='profile' src='{% static 'img/potato.png'%} '>
             <div style="margin-left: 10px;">
                 <div class='flex_row'>
-                    <h2>말하는 감자</h2>
+                    <h2>{{user.profile.name}}</h2>
                     <div>(족밥 Lv.8)</div>
                 </div>
-                <div>최다인 / 숭실대학교 소프트웨어학부 17학번</div>
+                <div>{{user.profile.intro}}</div> <!--프로필에서 자기소개 설정하는 부분-->
                 <a class='yellow'>수정하기</a>
             </div>
         </div>
