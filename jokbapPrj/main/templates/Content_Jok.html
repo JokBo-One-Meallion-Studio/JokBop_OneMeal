@@ -1,26 +1,9 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
+{% block content %}
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Content_Jok</title>
     <link rel="stylesheet" href="{% static 'css/Content.css'%}">
 </head>
-<body>
-    <div class='container'>
-        <a href= "{% url 'home'%}">
-            <img class='nav' src='{% static 'img/jb_dark_logo.svg'%}'>
-        </a>
-        <a  href= "{% url 'j_page'%}">
-            <img class='nav' src='{%  static 'img/j_logo.svg'%}'>
-        </a>
-        <a  href= "{% url 'b_page'%}">
-            <img class='nav' src='{% static 'img/b_logo.svg'%} '>
-        </a>
-    </div>
-    <div id='line'></div>
     <div class="container">
         <div class="flex_row">
             <img id="profile" src="{% static 'img/potato.png'%}">
@@ -96,9 +79,4 @@
             <input id="write_comment" type="text" name="newComment" placeholder="댓글 입력">
             <img id="send_icon" src="{% static 'img/send.svg'%}">
     </div>
-
-    <div id='footer'>
-        ⓒ 2021. jokbap all rights reserved.
-    </div>
-</body>
-</html>
+{% endblock %}

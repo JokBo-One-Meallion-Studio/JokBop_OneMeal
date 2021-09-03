@@ -1,34 +1,13 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-
+{% block content %}
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" href="{% static 'css/jb_page.css'%}">
-    <title>Jok</title>
 </head>
-
-<body>
-    <div class='container'>
-        <a href= "{% url 'home'%}">
-            <img class='nav' src='{% static 'img/jb_dark_logo.svg'%}'>
-        </a>
-        <a  href= "{% url 'j_page'%}">
-            <img class='nav' src='{%  static 'img/j_logo.svg'%}'>
-        </a>
-        <a  href= "{% url 'b_page'%}">
-            <img class='nav' src='{% static 'img/b_logo.svg'%} '>
-        </a>
-    </div>
-    <div class="line"></div>
-    <div class='container'>
+    <div class='title-container' > <!--base.css에서 수정-->
         <h1>
             족보 
-        </h1>
-        
-                 
+        </h1>    
     </div>
     <div class="searchbar">
         <form action="">
@@ -36,8 +15,6 @@
             <button class="imgbutton" type="submit"><img class='searchimg' src='{% static 'img/search.svg'%}'></button>
         </form>
     </div>
-
-
     <a href='{% url 'Content_Jok' %}'>
 
         <div class='post'>
@@ -143,11 +120,5 @@
         </div>
     </a>
     
-    <div id='footer'>
-        ⓒ 2021. jokbap all rights reserved.
-    </div>
+{% endblock %}
 
-
-</body>
-
-</html>

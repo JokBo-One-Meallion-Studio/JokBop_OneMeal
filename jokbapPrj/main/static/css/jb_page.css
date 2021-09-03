@@ -143,3 +143,7 @@ a:hover {
   height:46px;
   cursor: pointer;
 }
+.title-container{
+  padding-top:80px;
+  padding-bottom: 15px;
+}
