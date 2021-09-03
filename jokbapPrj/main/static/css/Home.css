@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap");
+
+body {
+  width: 375px;
+  height: 812px;
+  padding: 24px;
+  padding: 24px;
+  padding-top: 15px;
+  box-sizing: border-box;
+  margin: 0px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #191919;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+}
+
+h2 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+}
+
+h3 {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0;
+}
+
+a:link {
+  color: #191919;
+  text-decoration: none;
+}
+a:visited {
+  color: #191919;
+  text-decoration: none;
+}
+a:hover {
+  color: #191919;
+  text-decoration: underline;
+}
+
+.container {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  box-sizing: border-box;
+}
+
+.post_container {
+  padding-top: 15px;
+  box-sizing: border-box;
+}
+
+.nav {
+  width: 45px;
+  margin-right: 30px;
+}
+
+.flex_row {
+  display: flex;
+  flex-flow: row;
+  align-items: flex-end;
+}
+
+.space_around {
+  justify-content: space-between;
+}
+
+.yellow {
+  color: #fbc93b;
+}
+
+.dark_gray {
+  color: #999999;
+}
+
+.gray {
+  color: #dbdbdb;
+}
+
+.icon {
+  width: 12px;
+}
+
+.new {
+  width: 20px;
+  margin-left: 5px;
+}
+
+#line {
+  height: 2px;
+  width: 100%;
+  background-color: #ededed;
+}
+
+#profile {
+  width: 60px;
+}
+
+#banner {
+  width: 327px;
+  height: 72px;
+  margin-bottom: 20px;
+  background-color: #f1f1f5;
+}
+
+#footer {
+  text-align: center;
+  color: #dbdbdb;
+}

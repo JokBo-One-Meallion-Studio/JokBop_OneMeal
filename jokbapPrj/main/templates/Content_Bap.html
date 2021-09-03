@@ -1,0 +1,102 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content_Bap</title>
+    <link rel="stylesheet" href="{% static 'css/Content.css'%}">
+</head>
+<body>
+    <div class='container'>
+        <a href= "{% url 'home'%}">
+            <img class='nav' src='{% static 'img/jb_dark_logo.svg'%}'>
+        </a>
+        <a  href= "{% url 'j_page'%}">
+            <img class='nav' src='{%  static 'img/j_logo.svg'%}'>
+        </a>
+        <a  href= "{% url 'b_page'%}">
+            <img class='nav' src='{% static 'img/b_logo.svg'%} '>
+        </a>
+    </div>
+    <div id='line'></div>
+    <div class="container">
+        <div class="flex_row">
+            <img id="profile" src="{% static "img/baby.png"%}">
+            <div style="margin-left: 10px;">
+                <div class='flex_row' style="align-items: flex-end;">
+                    <h3>힘샌애기</h3>
+                    <div style="font-size: 10px;" >(족밥 Lv.2)</div>
+                </div>
+                <div>컴퓨터학부 21학번</div>
+            </div>
+        </div>
+
+        <div class="content">
+            <h2>2020 컴퓨터구조 족보 구합니다</h2>
+            <div id="main">
+                <p>
+                    혹시 작년 이종근 교수님 족보 있을까요! <br>
+                    아슐리 선제시합니다ㅠㅠ <br>
+                    선배님들과 친해지고 싶어요!
+                </p>
+            </div>
+        </div>
+        <div class="flex_row" style="justify-content: flex-start;">
+            <div class='flex_row' style="align-items: flex-end;">
+                <div id="comments_icon">
+                    <img class="icons" src="{% static "img/comments.svg"%}">  23
+                </div>
+            </div>
+            <div class='flex_row' style="align-items: flex-end;">
+                <div id="like_icon">
+                    <img class="icons" src="{% static "img/like.svg"%}">  56
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="comments">
+        <div class="container">
+            <div class="flex_row" style="margin-left: 10px;">
+                <div id="comment_img">
+                <img class="comment_profile" src="{% static "img/mala.png" %}" alt="chick">
+                </div>
+                <div id="comment_text">
+                    <div class="flex_row" style="margin-bottom: 2px;">
+                    <strong>마라마왕탕 </strong>
+                    <p> (컴학 16)</p>
+                    </div>
+                    <p>마라샹궈에 양고기 추가 가능한가요??</p> 
+                </div>
+            </div>
+        </div>
+        <div id="line_commentbox"></div>
+        <div class="container">
+            <div class="flex_row" style="margin-left: 10px;">
+                <div id="comment_img">
+                <img class="comment_profile" src="{% static "img/potato.png"%}" alt="chick">
+                </div>
+                <div id="comment_text">
+                    <div class="flex_row" style="margin-bottom: 2px;">
+                    <strong>말하는 감자 </strong>
+                    <p> (소프트 17)</p>
+                    </div>
+                    <p>저도 마라샹궈가 좋은데 마라샹궈 댓달아봅니다! <br>친해져요 후배님!</p> 
+                </div>
+            </div>
+        </div>  
+    </div>
+    
+
+    <div class="NewComment">
+            <input id="write_comment" type="text" name="newComment" placeholder="댓글 입력">
+            <img id="send_icon" src="{% static "img/send.svg"%}">
+    </div>
+
+    <div id='footer'>
+        ⓒ 2021. jokbap all rights reserved.
+    </div>
+</body>
+</html>

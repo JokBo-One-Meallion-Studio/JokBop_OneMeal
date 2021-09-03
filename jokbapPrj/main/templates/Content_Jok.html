@@ -1,0 +1,104 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content_Jok</title>
+    <link rel="stylesheet" href="{% static 'css/Content.css'%}">
+</head>
+<body>
+    <div class='container'>
+        <a href= "{% url 'home'%}">
+            <img class='nav' src='{% static 'img/jb_dark_logo.svg'%}'>
+        </a>
+        <a  href= "{% url 'j_page'%}">
+            <img class='nav' src='{%  static 'img/j_logo.svg'%}'>
+        </a>
+        <a  href= "{% url 'b_page'%}">
+            <img class='nav' src='{% static 'img/b_logo.svg'%} '>
+        </a>
+    </div>
+    <div id='line'></div>
+    <div class="container">
+        <div class="flex_row">
+            <img id="profile" src="{% static 'img/potato.png'%}">
+            <div style="margin-left: 10px;">
+                <div class='flex_row' style="align-items: flex-end;">
+                    <h3>말하는 감자</h3>
+                    <div style="font-size: 10px;" >(족밥 Lv.8)</div>
+                </div>
+                <div>소프트웨어학부 17학번</div>
+            </div>
+        </div>
+
+        <div class="content">
+            <h2>2021-1 네트워크 프로그래밍 족보</h2>
+            <div id="main">
+                <p>
+                    🔥직접 작성한 최신 네프 족보있습니다. <br>
+                    필요하신 분 댓글로 밥 제시해주세요! <br>
+                    참고로 매운거 못먹습니다.
+                </p>
+            </div>
+        </div>
+        <div class="flex_row" style="justify-content: flex-start;">
+            <div class='flex_row' style="align-items: flex-end;">
+                <div id="comments_icon">
+                    <img class="icons" src="{% static 'img/contents.svg'%}">  68
+                </div>
+            </div>
+            <div class='flex_row' style="align-items: flex-end;">
+                <div id="like_icon">
+                    <img class="icons" src="{% static 'img/like.svg'%}">  124
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="comments">
+        <div class="container">
+            <div class="flex_row" style="margin-left: 10px;">
+                <div id="comment_img">
+                <img class="comment_profile" src="{% static 'img/chick.png '%}" alt="chick">
+                </div>
+                <div id="comment_text">
+                    <div class="flex_row" style="margin-bottom: 2px;">
+                    <strong>코딩햇병아리 </strong>
+                    <p> (AI융합 20)</p>
+                    </div>
+                    <p>BCH 치킨 어떠신가요! 대면이 껄끄러우시면 
+                     <br>기프티콘으로도 가능합니다 선배님..!</p> 
+                </div>
+            </div>
+        </div>
+        <div id="line_commentbox"></div>
+        <div class="container">
+            <div class="flex_row" style="margin-left: 10px;">
+                <div id="comment_img">
+                <img class="comment_profile" src="{% static 'img/baby.png'%}" alt="chick">
+                </div>
+                <div id="comment_text">
+                    <div class="flex_row" style="margin-bottom: 2px;">
+                    <strong>힘샌애기 </strong>
+                    <p> (컴학 21)</p>
+                    </div>
+                    <p>헐헐 엄청 찾고 있었는데ㅠㅠㅠ 
+                     <br>스톤은 어떠실까요 선배님..!</p> 
+                </div>
+            </div>
+        </div>  
+    </div>
+    
+
+    <div class="NewComment">
+            <input id="write_comment" type="text" name="newComment" placeholder="댓글 입력">
+            <img id="send_icon" src="{% static 'img/send.svg'%}">
+    </div>
+
+    <div id='footer'>
+        ⓒ 2021. jokbap all rights reserved.
+    </div>
+</body>
+</html>
