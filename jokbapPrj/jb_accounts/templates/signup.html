@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log In</title>
-    <link href="{% static 'css/login.css'%}" rel="stylesheet" type="text/css"/>
+    <link href="{% static 'css/signup.css'%}" rel="stylesheet" type="text/css"/>
 </head>
 <body>
     <div class='container'>
@@ -17,17 +17,15 @@
     <div class="line"></div>
     <div class='container'>
         <div class="maintext">
-            <h1>족밥로그인</h1>
-            <h5>보한</h5>
-            <div class="text">
-                <div class="white">보</div><h5>끼</h5>
-            </div>
+            <h1>족보한끼</h1>
+            <h5>회원가입</h5>
         </div>
         <br>
     </div>
     <div class='container'>
-        <form>
-            <select class="loginselect">
+        <form method="POST" action="{% url 'signup' %}">
+            {% csrf_token %} 
+            <select class="univ_select">
                 <option value="0">학교를 입력해주세요.</option>
                 <option value="1">서울대학교</option>
                 <option value="2">연세대학교</option>
@@ -44,22 +42,15 @@
                 <option value="12">동국대학교</option>
                 <option  value="14">숭실대학교</option>
             </select> <br>
-            <input class="login" type="text" placeholder="아이디를 입력해주세요.">
-            <input class="login" type="password" placeholder="비밀번호를 입력해주세요.">
-            <div class='container' style="display:flex; align-items: center;">
-                <input id='auto' class="logincheck" type="checkbox" value=""><label for="auto">자동 로그인</label> 
-                <input id='save' class="logincheck" type="checkbox" value=""><label for="save">아이디 저장</label>
-            </div>
-            <a href= "{% url 'home'%}" style="text-decoration: none;">
-                <div class="loginbutton">로그인</div>
-            </a>
+            <input name="phoneNum" class="signup" type="text" placeholder="전화번호를 입력해주세요. " required>
+            <input name="username" class="signup" type="text" placeholder="사용하실 닉네임을 입력해주세요." required>           
+            <input name="userID" class="signup" type="text" placeholder="아이디를 입력해주세요." required>
+            <input name="password" class="signup" type="password" placeholder="비밀번호를 입력해주세요." required>
+            <input name="check_password" class="signup" type="password" placeholder="비밀번호를 다시 입력해주세요." required>
+
+            <input class="signup_button" type="submit" value="회원가입">
         </form>
     </div>
-    <div class="forget">
-        계정을 잊으셨나요?&nbsp;
-        <p class="searchID"> ID 찾기&nbsp;</p>
-        또는&nbsp;
-        <p class="searchPW"> PW 찾기&nbsp;</p>
-    </div>
+  
 </body>
 </html>

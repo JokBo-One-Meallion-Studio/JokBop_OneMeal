@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <link href="{% static 'css/login.css'%}" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <div class='container'>
+        <a href=''>
+            <img class='nav' src='{% static 'img/jb_logo.svg'%}'>
+        </a>
+    </div>
+    <div class="line"></div>
+    <div class='container'>
+        <div class="maintext">
+            <h1>족보한끼</h1>
+            <h5>로그인</h5>
+         
+        </div>
+        <br>
+    </div>
+    <div class='container'>
+        <form method="POST" action="{% url 'login' %}">
+            {% csrf_token %} 
+            <select class="loginselect">
+                <option value="0">학교를 입력해주세요.</option>
+                <option value="1">서울대학교</option>
+                <option value="2">연세대학교</option>
+                <option value="3">고려대학교</option>
+                <option value="4">서강대학교</option>
+                <option value="5">성균관대학교</option>
+                <option value="6">한양대학교</option>
+                <option value="7">중앙대학교</option>
+                <option value="8">경희대학교</option>
+                <option value="9">한국외국어대학교</option>
+                <option value="10">서울시립대학교</option>
+                <option value="13">홍익대학교</option>
+                <option value="11">건국대학교</option>
+                <option value="12">동국대학교</option>
+                <option  value="14">숭실대학교</option>
+            </select> <br>
+            <input name="userID" class="login" type="text" placeholder="아이디를 입력해주세요." required>
+            <input name="password" class="login" type="password" placeholder="비밀번호를 입력해주세요." required>
+             {% if messages %}
+	        {% for message in messages %}
+		        <strong> {{ message.message }}</strong>
+	        {% endfor %}
+            {% endif %}
+    
+            </br>
+            <div class='container' style="display:flex; align-items: center;">
+                <input id='auto' class="logincheck" type="checkbox" value=""><label for="auto">자동 로그인</label> 
+                <input id='save' class="logincheck" type="checkbox" value=""><label for="save">아이디 저장</label>
+            </div>
+            <input class="loginbutton" type="submit" value="로그인">
+        </form>
+    </div>
+   
+    <div class="forget">
+        계정을 잊으셨나요?&nbsp;
+        <p class="searchID"> ID 찾기&nbsp;</p>
+        또는&nbsp;
+        <p class="searchPW"> PW 찾기&nbsp;</p>
+    </div>
+    <div class="joinJB">
+        <p class= "join">계정을 없으신가요?<a class="joinBtn" href="{% url 'signup' %}">가입하기</a></p>
+    </div>
+</body>
+</html>

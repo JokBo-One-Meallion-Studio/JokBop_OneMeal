@@ -3,9 +3,6 @@ from django.shortcuts import render,redirect
 def loading(request):
     return render(request,'Loading.html')
 
-def login(request):
-    return render(request, 'login.html')
-
 def home(request):
     return render(request,'Home.html')
 
