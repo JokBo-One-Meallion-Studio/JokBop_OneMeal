@@ -13,8 +13,8 @@ def jpage(request):
     return render(request,'j_page.html',{"posts":posts})
 
 #'족' 상세페이지
-def jContent(request, id):
-    post= get_object_or_404(Bob_Post, pk=id)
+def jContent(request, j_id):
+    post= get_object_or_404(Jok_Post, pk=j_id)
     return render(request, 'Content_Jok.html',{"post":post})
 
 #'족'작성페이지
@@ -26,4 +26,5 @@ def bpage(request):
 
 def bContent(request):
     return render(request, 'Content_Bap.html')
+
 
