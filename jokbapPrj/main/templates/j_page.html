@@ -15,110 +15,23 @@
             <button class="imgbutton" type="submit"><img class='searchimg' src='{% static 'img/search.svg'%}'></button>
         </form>
     </div>
-    <a href='{% url 'Content_Jok' %}'>
 
-        <div class='post'>
-            <h3>2021-1 네트워크프로그래밍 족보</h3>
-            🔥직접 작성한 최신 네프 족보있습니다. 필요하신 분 댓글 달아주...
-            <div class='gray'>
-                5분 전 | 말하는 감자 (소프트 17)
+    {% for post in posts %}
+        <a href="{% url 'jContent' post.id %}">
+            <div class='post'>
+                <h3>{{post.title}}</h3>
+                {{post.summary}}
+                <div class='gray'>
+                    {{post.pub_date}} | {{post.author}}
+                </div>
             </div>
-        </div>
-    </a>
+        </a>
+        <div class="line"></div>
+    {% endfor %} 
+
     
-
-    <div class="line"></div>
-
-
-    <a href='{% url 'Content_Jok' %}'>
-        <div class='post'>
-            <h3>2021-1 인공지능 족보</h3>
-            이 어마무시한 과목을 듣게 되신 분은 연락주세요...
-            <div class='gray'>
-                7분 전 | 마라마왕탕 (컴학 16)
-            </div>
-        </div>
-    </a>
-
-    <div class="line"></div>
-
-
-    <a href='{% url 'Content_Jok' %}'>
-
-        <div class='post'>
-            <h3>년도무관 알고리즘 족보</h3>
-            ㅂㅇㅎ 교수님 알고리즘 시험 족보 급하게 구합니다! 가격 무제한..
-            <div class='gray'>
-                12분 전 | 일하는 감자 (소프트 17)
-            </div>
-        </div>
-    </a>
-    
-    <div class="line"></div>
-
-
-    <a href='{% url 'Content_Jok' %}'>
-
-        <div class='post'>
-            <h3>년도무관 알고리즘 족보</h3>
-            ㅂㅇㅎ 교수님 알고리즘 시험 족보 급하게 구합니다! 가격 무제한..
-            <div class='gray'>
-                12분 전 | 일하는 감자 (소프트 17)
-            </div>
-        </div>
-    </a>
-
-    <div class="line"></div>
-
-
-    <a href='{% url 'Content_Jok' %}'>
-
-        <div class='post'>
-            <h3>년도무관 알고리즘 족보</h3>
-            ㅂㅇㅎ 교수님 알고리즘 시험 족보 급하게 구합니다! 가격 무제한..
-            <div class='gray'>
-                12분 전 | 일하는 감자 (소프트 17)
-            </div>
-        </div>
-    </a>
-
-    <div class="line"></div>
-
-    <a href='{% url 'Content_Jok' %}'>
-        <div class='post'>
-            <h3>년도무관 알고리즘 족보</h3>
-            ㅂㅇㅎ 교수님 알고리즘 시험 족보 급하게 구합니다! 가격 무제한..
-            <div class='gray'>
-                12분 전 | 일하는 감자 (소프트 17)
-            </div>
-        </div>
-    </a>
-
-    <div class="line"></div>
-
-
-    <a href='{% url 'Content_Jok' %}'>
-        <div class='post'>
-            <h3>년도무관 알고리즘 족보</h3>
-            ㅂㅇㅎ 교수님 알고리즘 시험 족보 급하게 구합니다! 가격 무제한..
-            <div class='gray'>
-                12분 전 | 일하는 감자 (소프트 17)
-            </div>
-        </div>
-    </a>
-
-    <div class="line"></div>
-
-
-    <a href='{% url 'Content_Jok' %}'>
-        <div class='post'>
-            <h3>년도무관 알고리즘 족보</h3>
-            ㅂㅇㅎ 교수님 알고리즘 시험 족보 급하게 구합니다! 가격 무제한..
-            <div class='gray'>
-                12분 전 | 일하는 감자 (소프트 17)
-            </div>
-        </div>
-    </a>
-    
+    <div id="create_btn" >
+            <a href={% url 'new_jokbo' %}><img src="{% static 'img/create_btn.png' %}" /></a>
+    </div>
 {% endblock %}
 

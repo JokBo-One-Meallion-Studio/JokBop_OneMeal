@@ -22,12 +22,12 @@ body {
     border-bottom:solid 2px #ededed;
 }
 
-.create_btn{
+#create_btn{
     position:fixed;
-    bottom:170px;
+    bottom:100px;
     left:300px;
 }
-.create_btn img
+#create_btn img
 {
     width:45px;
     height:45px;

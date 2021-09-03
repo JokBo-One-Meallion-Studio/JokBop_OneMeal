@@ -9,7 +9,7 @@
             <img id="profile" src="{% static 'img/potato.png'%}">
             <div style="margin-left: 10px;">
                 <div class='flex_row' style="align-items: flex-end;">
-                    <h3>말하는 감자</h3>
+                    <h3>{{post.author.profile.name}}</h3>
                     <div style="font-size: 10px;" >(족밥 Lv.8)</div>
                 </div>
                 <div>소프트웨어학부 17학번</div>
@@ -17,15 +17,15 @@
         </div>
 
         <div class="content">
-            <h2>2021-1 네트워크 프로그래밍 족보</h2>
+            <h2>{{post.title}}</h2>
             <div id="main">
                 <p>
-                    🔥직접 작성한 최신 네프 족보있습니다. <br>
-                    필요하신 분 댓글로 밥 제시해주세요! <br>
-                    참고로 매운거 못먹습니다.
+                    {{post.text}}
                 </p>
             </div>
         </div>
+
+        <!--댓글 구현-->
         <div class="flex_row" style="justify-content: flex-start;">
             <div class='flex_row' style="align-items: flex-end;">
                 <div id="comments_icon">
