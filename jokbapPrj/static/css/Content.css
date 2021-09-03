@@ -14,6 +14,10 @@ body {
   color: #191919;
 }
 
+p{
+  margin: 0;
+}
+
 h1 {
   font-size: 28px;
   font-weight: 700;
@@ -44,21 +48,10 @@ a:hover {
   color: #191919;
   text-decoration: underline;
 }
-.profile-container{
-  padding-top:70px;
-  padding-bottom:15px;
-  box-sizing: border-box;
-  border-bottom:solid 2px #ededed;
-}
-.container {
-  
-  padding-top: 10px;
-  padding-bottom: 15px;
-  box-sizing: border-box;
-}
 
-.post_container {
+.container {
   padding-top: 15px;
+  padding-bottom: 15px;
   box-sizing: border-box;
 }
 
@@ -70,32 +63,6 @@ a:hover {
 .flex_row {
   display: flex;
   flex-flow: row;
-  align-items: flex-end;
-}
-
-.space_around {
-  justify-content: space-between;
-}
-
-.yellow {
-  color: #fbc93b;
-}
-
-.dark_gray {
-  color: #999999;
-}
-
-.gray {
-  color: #dbdbdb;
-}
-
-.icon {
-  width: 12px;
-}
-
-.new {
-  width: 20px;
-  margin-left: 5px;
 }
 
 #line {
@@ -105,17 +72,84 @@ a:hover {
 }
 
 #profile {
-  width: 60px;
+  width: 40px;
 }
 
-#banner {
+.content{
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+#main{
+  margin-top: 7px;
+}
+
+#comments_icon{
+  color: #fbc93b;
+  align-items: flex-end;
+  display: flex;
+  flex-flow: row;
+  margin-right: 2px;
+}
+
+#like_icon{
+  color: #fbc93b;
+  align-items: flex-end;
+  display: flex;
+  flex-flow: row;
+}
+
+.icons{
+  width: 15px;
+}
+
+.comments{
+  background-color: #f8f8fa;
   width: 327px;
-  height: 72px;
-  margin-bottom: 20px;
+
+}
+
+#comment_img{
+  padding-top: 5px;
+  margin-right: 7px;
+}
+
+.comment_profile{
+  width: 35px;
+}
+
+#line_commentbox {
+  margin-left: 3%;
+  height: 2px;
+  width: 94%;
+  background-color: #ededed;
+}
+
+.NewComment{
+  display: flex;
+  flex-flow: row;
+  margin-top: 220px;
   background-color: #f1f1f5;
 }
 
+#write_comment{
+  padding-left: 15px;
+  width: 280px;
+  height: 40px;
+  border: 1px none;
+  background-color: #f1f1f5;
+  text-align: justify;
+}
+
+#send_icon{
+  width: 22px;
+  margin-top: 9px;
+  margin-bottom: 9px;
+  align-items: center;
+}
+
 #footer {
+  margin-top: 20px;
   text-align: center;
   color: #dbdbdb;
 }

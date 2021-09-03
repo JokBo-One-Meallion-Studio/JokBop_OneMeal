@@ -1,0 +1,29 @@
+body {
+    width: 375px;
+    height: 812px;
+    padding: 24px;
+    padding: 24px;
+    padding-top: 15px;
+    box-sizing: border-box;
+    margin: 0px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #191919;
+  }
+  
+.nav-container{
+    top:0;
+    background-color:white;
+    position :fixed;
+    width:375px;
+    padding: 24px;
+    padding: 24px;
+    margin: 0px;
+}
+
+.create_btn img
+{
+    width:45px;
+    height:45px;
+}

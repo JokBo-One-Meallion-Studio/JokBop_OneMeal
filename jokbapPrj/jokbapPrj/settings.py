@@ -57,7 +57,7 @@ ROOT_URLCONF = 'jokbapPrj.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['jokbapPrj/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

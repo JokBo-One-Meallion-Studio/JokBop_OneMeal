@@ -1,18 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap");
 
-body {
-  width: 375px;
-  height: 812px;
-  padding: 24px;
-  padding: 24px;
-  padding-top: 15px;
-  box-sizing: border-box;
-  margin: 0px;
-  font-family: "Noto Sans KR", sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  color: #191919;
-}
 
 h1 {
   font-size: 28px;
@@ -44,15 +31,9 @@ a:hover {
   color: #191919;
   text-decoration: underline;
 }
-.profile-container{
-  padding-top:70px;
-  padding-bottom:15px;
-  box-sizing: border-box;
-  border-bottom:solid 2px #ededed;
-}
+
 .container {
-  
-  padding-top: 10px;
+  padding-top: 15px;
   padding-bottom: 15px;
   box-sizing: border-box;
 }
