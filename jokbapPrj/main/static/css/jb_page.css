@@ -51,9 +51,11 @@ a:hover {
 }
 
 .container {
+  display: inline-block;
   padding-top: 15px;
   padding-bottom: 15px;
   box-sizing: border-box;
+  width: 327px;
 }
 
 .searchbar {
@@ -132,6 +134,12 @@ a:hover {
 }
 
 .create_btn img{
+  position: fixed;
+  float: right;
+  bottom: 20px;
+  right: 20px;
+  border: none;
   width:46px;
   height:46px;
+  cursor: pointer;
 }
