@@ -15,99 +15,20 @@
             <button class="imgbutton" type="submit"><img class='searchimg' src='{% static 'img/search.svg'%}'></button>
         </form>
     </div>
-    <a href='{% url 'Content_Bap' %}'>
-        <div class='post'>
-            <h3>2020 컴퓨터구조 족보 구합니다</h3>
-            혹시 작년도 이종근 교수님 컴구 족보 있을까요! 밥슐리 선제시 합...
-            <div class='gray'>
-                3분 전 | 힘샌애기 (컴학 21)
+    
+    {% for post in posts %}
+        <a href="{% url 'bContent' post.id %}">
+            <div class='post'>
+                <h3>{{post.title}}</h3>
+                {{post.summary}}
+                <div class='gray'>
+                    {{post.pub_date}} | {{post.author}}
+                </div>
             </div>
-        </div>
-    </a>
-
-    <div class="line"></div>
-
-    <a href='{% url 'Content_Bap'%}'>
-        <div class='post'>
-            <h3>년도무관 알고리즘 족보</h3>
-            ㅂㅇㅎ 교수님 알고리즘 시험 족보 급하게 구합니다! 가격 무제한..
-            <div class='gray'>
-                12분 전 | 일하는 감자 (소프트 17)
-            </div>
-        </div>
-    </a>
-
-    <div class="line"></div>
-
-    <a href='{% url 'Content_Bap'%}'>
-        <div class='post'>
-            <h3>년도무관 알고리즘 족보</h3>
-            ㅂㅇㅎ 교수님 알고리즘 시험 족보 급하게 구합니다! 가격 무제한..
-            <div class='gray'>
-                12분 전 | 일하는 감자 (소프트 17)
-            </div>
-        </div>
-    </a>
-
-    <div class="line"></div>
-
-    <a href='{% url 'Content_Bap'%}'>
-        <div class='post'>
-            <h3>년도무관 알고리즘 족보</h3>
-            ㅂㅇㅎ 교수님 알고리즘 시험 족보 급하게 구합니다! 가격 무제한..
-            <div class='gray'>
-                12분 전 | 일하는 감자 (소프트 17)
-            </div>
-        </div>
-    </a>
-
-    <div class="line"></div>
-
-    <a href='{% url 'Content_Bap'%}'>
-        <div class='post'>
-            <h3>년도무관 알고리즘 족보</h3>
-            ㅂㅇㅎ 교수님 알고리즘 시험 족보 급하게 구합니다! 가격 무제한..
-            <div class='gray'>
-                12분 전 | 일하는 감자 (소프트 17)
-            </div>
-        </div>
-    </a>
-
-    <div class="line"></div>
-
-    <a href='{% url 'Content_Bap'%}'>
-        <div class='post'>
-            <h3>년도무관 알고리즘 족보</h3>
-            ㅂㅇㅎ 교수님 알고리즘 시험 족보 급하게 구합니다! 가격 무제한..
-            <div class='gray'>
-                12분 전 | 일하는 감자 (소프트 17)
-            </div>
-        </div>
-    </a>
-
-    <div class="line"></div>
-
-    <a href='{% url 'Content_Bap'%}'>
-        <div class='post'>
-            <h3>년도무관 알고리즘 족보</h3>
-            ㅂㅇㅎ 교수님 알고리즘 시험 족보 급하게 구합니다! 가격 무제한..
-            <div class='gray'>
-                12분 전 | 일하는 감자 (소프트 17)
-            </div>
-        </div>
-    </a>
-
-    <div class="line"></div>
-
-    <a href='{% url 'Content_Bap'%}'>
-        <div class='post'>
-            <h3>년도무관 알고리즘 족보</h3>
-            ㅂㅇㅎ 교수님 알고리즘 시험 족보 급하게 구합니다! 가격 무제한..
-            <div class='gray'>
-                12분 전 | 일하는 감자 (소프트 17)
-            </div>
-        </div>
-    </a>
+        </a>
+        <div class="line"></div>
+    {% endfor %} 
+    
     <div id="create_btn" >
             <a href={% url 'new_jokbo' %}><img src="{% static 'img/create_btn.png' %}" /></a>
     </div>
