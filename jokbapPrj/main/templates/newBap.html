@@ -8,11 +8,11 @@
     </head>
     <div class='title-container' > <!--base.css에서 수정-->
         <h1>
-            족보 작성하기 
+            밥 작성하기 
         </h1>    
     </div>
-    <div class="uploadArea">
-         <form  method="post" action="{% url 'upload_jok' %}" enctype="multipart/form-data">
+    <div id="uploadArea">
+         <form  method="post" action="{% url 'upload_bap' %}" enctype="multipart/form-data">
              {%csrf_token%}
              <div class="mb-3">
                  <!-- <label for="formFile" class="form-label"></label> -->
