@@ -3,13 +3,13 @@
 {% block content %}
 <!--html, CSS 수정 필요 !!-->
     <head>
-        <link type="text/css" rel="stylesheet" href="{% static 'css/jb_page.css'%}">
+        <link type="text/css" rel="stylesheet" href="{% static 'css/create.css'%}">
         </style>
     </head>
     <div class='title-container' > <!--base.css에서 수정-->
         <h1>
             족보 작성하기 
-        </h1>    
+        </h1>   
     </div>
     <div class="uploadArea">
          <form  method="post" action="{% url 'upload_jok' %}" enctype="multipart/form-data">
