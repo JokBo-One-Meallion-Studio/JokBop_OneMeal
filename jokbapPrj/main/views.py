@@ -21,7 +21,8 @@ def jpage(request):
 #'족' 상세페이지
 def jContent(request, j_id):
     post= get_object_or_404(Jok_Post, pk=j_id)
-    return render(request, 'Content_Jok.html',{"post":post})
+    comments= post.J_comments.all()
+    return render(request, 'Content_Jok.html',{"post":post, "comments": comments})
 
 #'족'작성페이지
 def createJokbo(request):
@@ -57,7 +58,8 @@ def bpage(request):
 
 def bContent(request, b_id):
     post= get_object_or_404(Bob_Post, pk=b_id)
-    return render(request, 'Content_Bap.html',{"post":post})
+    comments=post.B_comments.all()
+    return render(request, 'Content_Bap.html',{"post":post,"comments": comments})
 
 def j_delete(request, post_id):
     post=get_object_or_404(Jok_Post,pk=post_id)
