@@ -12,4 +12,6 @@ urlpatterns = [
     path('jpage/create_bap',views.createBap,name='new_bap'),
     path('jpage/upload_jokbo',views.uploadJok,name='upload_jok'),
     path('jpage/upload_bap',views.uploadBap,name='upload_bap'),
+    path('jpage_content/delete/<int:post_id>',views.j_delete,name='j_delete'),
+    path('bpage_content/delete/<int:post_id>',views.b_delete,name='b_delete'),
 ]

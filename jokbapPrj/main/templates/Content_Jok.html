@@ -21,13 +21,17 @@
             <h2>{{post.title}}</h2>
             <div id="main">
                 <div> 
-                    <img src="{{post.image.url}}" alt="이미지사진">
+                    {% comment %} <img src="{{post.image.url}}" alt="이미지사진"> {% endcomment %}
                 </div>
                 <p>
                     {{post.text}}
                 </p>
             </div>
         </div>
+
+        {% if user.id == post.author.id %}
+            <a href="{% url 'j_delete' post.id %}"> 삭제하기</a>
+        {% endif %}
 
         <!--댓글 구현-->
         <div class="flex_row" style="justify-content: flex-start;">
@@ -44,41 +48,26 @@
         </div>
     </div>
 
-    <div class="comments">
-        <div class="container">
-            <div class="flex_row" style="margin-left: 10px;">
-                <div id="comment_img">
-                <img class="comment_profile" src="{% static 'img/chick.png '%}" alt="chick">
-                </div>
-                <div id="comment_text">
-                    <div class="flex_row" style="margin-bottom: 2px;">
-                    <strong>코딩햇병아리 </strong>
-                    <p> (AI융합 20)</p>
+ 
+     {% for comment in comments %}
+        <div class="comments">
+            <div class="container">
+                <div class="flex_row" style="margin-left: 10px;">
+                    <div id="comment_img">
+                    <img class="comment_profile" src="{% static 'img/mala.png'%}" alt="chick">
                     </div>
-                    <p>BCH 치킨 어떠신가요! 대면이 껄끄러우시면 
-                     <br>기프티콘으로도 가능합니다 선배님..!</p> 
+                    <div id="comment_text">
+                        <div class="flex_row" style="margin-bottom: 2px;">
+                        <strong>{{comment.author}} </strong>
+                        <p> (컴학 16)</p>
+                        </div>
+                        <p>{{comment.text}}</p> 
+                    </div>
                 </div>
             </div>
         </div>
-        <div id="line_commentbox"></div>
-        <div class="container">
-            <div class="flex_row" style="margin-left: 10px;">
-                <div id="comment_img">
-                <img class="comment_profile" src="{% static 'img/baby.png'%}" alt="chick">
-                </div>
-                <div id="comment_text">
-                    <div class="flex_row" style="margin-bottom: 2px;">
-                    <strong>힘샌애기 </strong>
-                    <p> (컴학 21)</p>
-                    </div>
-                    <p>헐헐 엄청 찾고 있었는데ㅠㅠㅠ 
-                     <br>스톤은 어떠실까요 선배님..!</p> 
-                </div>
-            </div>
-        </div>  
-    </div>
+    {% endfor %}
     
-
     <div class="NewComment">
             <input id="write_comment" type="text" name="newComment" placeholder="댓글 입력">
             <img id="send_icon" src="{% static 'img/send.svg'%}">

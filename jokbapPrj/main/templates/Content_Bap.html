@@ -21,7 +21,7 @@
             <h2>{{post.title}}</h2>
             <div id="main">
                 <div> 
-                    <img src="{{post.image.url}}" alt="이미지사진">
+                    {% comment %} <img src="{{post.image.url}}" alt="이미지사진"> {% endcomment %}
                 </div>
                 <p>
                    {{post.text}}
@@ -29,6 +29,9 @@
             </div>
         </div>
 
+         {% if user.id == post.author.id %}
+            <a href="{% url 'b_delete' post.id %}"> 삭제하기</a>
+         {% endif %}
         <!--댓글 구현 필요-->
         <div class="flex_row" style="justify-content: flex-start;">
             <div class='flex_row' style="align-items: flex-end;">
@@ -43,38 +46,25 @@
             </div>
         </div>
     </div>
-
-    <div class="comments">
-        <div class="container">
-            <div class="flex_row" style="margin-left: 10px;">
-                <div id="comment_img">
-                <img class="comment_profile" src="{% static 'img/mala.png'%}" alt="chick">
-                </div>
-                <div id="comment_text">
-                    <div class="flex_row" style="margin-bottom: 2px;">
-                    <strong>마라마왕탕 </strong>
-                    <p> (컴학 16)</p>
+    {% for comment in comments %}
+        <div class="comments">
+            <div class="container">
+                <div class="flex_row" style="margin-left: 10px;">
+                    <div id="comment_img">
+                    <img class="comment_profile" src="{% static 'img/mala.png'%}" alt="chick">
                     </div>
-                    <p>마라샹궈에 양고기 추가 가능한가요??</p> 
+                    <div id="comment_text">
+                        <div class="flex_row" style="margin-bottom: 2px;">
+                        <strong>{{comment.author}} </strong>
+                        <p> (컴학 16)</p>
+                        </div>
+                        <p>{{comment.text}}</p> 
+                    </div>
                 </div>
             </div>
         </div>
-        <div id="line_commentbox"></div>
-        <div class="container">
-            <div class="flex_row" style="margin-left: 10px;">
-                <div id="comment_img">
-                <img class="comment_profile" src="{% static 'img/potato.png'%}" alt="chick">
-                </div>
-                <div id="comment_text">
-                    <div class="flex_row" style="margin-bottom: 2px;">
-                    <strong>말하는 감자 </strong>
-                    <p> (소프트 17)</p>
-                    </div>
-                    <p>저도 마라샹궈가 좋은데 마라샹궈 댓달아봅니다! <br>친해져요 후배님!</p> 
-                </div>
-            </div>
-        </div>  
-    </div>
+    {% endfor %}
+    
     
 
     <div class="NewComment">
