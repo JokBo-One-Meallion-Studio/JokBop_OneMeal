@@ -7,7 +7,7 @@
 <!--프로필 띄우는 부분 css랑 html 수정 필요-->
     <div class="container">
         <div class="flex_row">
-            <img id="profile" src="{% static "img/baby.png"%}">
+            <img id="profile" src="{% static 'img/baby.png' %}">
             <div style="margin-left: 10px;">
                 <div class='flex_row' style="align-items: flex-end;">
                     <h3>{{post.author.profile.name}}</h3>
@@ -20,22 +20,28 @@
         <div class="content">
             <h2>{{post.title}}</h2>
             <div id="main">
+                <div> 
+                    {% comment %} <img src="{{post.image.url}}" alt="이미지사진"> {% endcomment %}
+                </div>
                 <p>
                    {{post.text}}
                 </p>
             </div>
         </div>
 
+         {% if user.id == post.author.id %}
+            <a href="{% url 'b_delete' post.id %}"> 삭제하기</a>
+         {% endif %}
         <!--댓글 구현 필요-->
         <div class="flex_row" style="justify-content: flex-start;">
             <div class='flex_row' style="align-items: flex-end;">
                 <div id="comments_icon">
-                    <img class="icons" src="{% static "img/comments.svg"%}">  23
+                    <img class="icons" src="{% static 'img/comments.svg'%}">  23
                 </div>
             </div>
             <div class='flex_row' style="align-items: flex-end;">
                 <div id="like_icon">
-                    <img class="icons" src="{% static "img/like.svg"%}">  56
+                    <img class="icons" src="{% static 'img/like.svg'%}">  56
                 </div>
             </div>
         </div>
@@ -45,7 +51,7 @@
         <div class="container">
             <div class="flex_row" style="margin-left: 10px;">
                 <div id="comment_img">
-                <img class="comment_profile" src="{% static "img/mala.png" %}" alt="chick">
+                <img class="comment_profile" src="{% static 'img/mala.png'%}" alt="chick">
                 </div>
                 <div id="comment_text">
                     <div class="flex_row" style="margin-bottom: 2px;">
@@ -60,7 +66,7 @@
         <div class="container">
             <div class="flex_row" style="margin-left: 10px;">
                 <div id="comment_img">
-                <img class="comment_profile" src="{% static "img/potato.png"%}" alt="chick">
+                <img class="comment_profile" src="{% static 'img/potato.png'%}" alt="chick">
                 </div>
                 <div id="comment_text">
                     <div class="flex_row" style="margin-bottom: 2px;">
@@ -76,7 +82,7 @@
 
     <div class="NewComment">
             <input id="write_comment" type="text" name="newComment" placeholder="댓글 입력">
-            <img id="send_icon" src="{% static "img/send.svg"%}">
+            <img id="send_icon" src="{% static 'img/send.svg'%}">
     </div>
 
     

@@ -9,5 +9,9 @@ urlpatterns = [
     path('jpage_content/<int:j_id>',views.jContent,name="jContent"), #족글 자세히 보기
     path('bpage_content/<int:b_id>',views.bContent,name="bContent"), #밥메 자세히 보기
     path('jpage/create_jokbo',views.createJokbo,name='new_jokbo'), #족보판매글 작성
-    
+    path('jpage/create_bap',views.createBap,name='new_bap'),
+    path('jpage/upload_jokbo',views.uploadJok,name='upload_jok'),
+    path('jpage/upload_bap',views.uploadBap,name='upload_bap'),
+    path('jpage_content/delete/<int:post_id>',views.j_delete,name='j_delete'),
+    path('bpage_content/delete/<int:post_id>',views.b_delete,name='b_delete'),
 ]
