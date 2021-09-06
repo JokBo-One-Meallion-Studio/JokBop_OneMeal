@@ -192,10 +192,10 @@ a:hover {
 }
 
 #newpost{
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 12pt;
   width: 306px;
   height: 312px;
-  border-color: #dbdbdb;
-  border-style: solid;
-  border-width: 2px;
+  border: none;
   padding: none;
 }
