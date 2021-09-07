@@ -18,7 +18,7 @@
                 >
             </div>
                 <div class="edit_ImgContainer">
-                    <form action="{% url "edit_profileImg" %}" enctype="multipart/form-data" method="post">
+                    <form action="{% url "edit_profileImg" %}" enctype="multipart/form-data" method="POST">
                         {%csrf_token%}
                         <label for="filebtn" class="editBtn"><b> 프로필 사진 바꾸기</b> </label>
                         <input type="file" accept="image/jpeg,image/png" name="image" style="display:none" id="filebtn">
