@@ -98,8 +98,23 @@ def b_comment(request, b_id):
 
 #프로필 구현부
 def myProfile(request):
-    user= request.user
     return render(request,'profile.html')
+
+def editProfile(request):
+    return render(request,'editProfile.html')
+
+def editProfileImg(request):
+    request.user.profile.profileImg=request.FILES['image']
+    request.user.profile.save()
+    return redirect('editprofile')
+
+def editProfileInfo(request):
+    profile=request.user.profile
+    profile.name=request.POST['name']
+    profile.intro=request.POST['intro']
+    profile.save()
+    return redirect('myprofile')
+    
 
 def profile(request,author_id):
     author= get_object_or_404(User, pk=author_id)
