@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!--html, CSS 수정 필요 !!-->
+<!-- 일단 newBap 복붙 해놓음 임시방편 -->
+   <head>
+    <link rel="stylesheet" href="{% static 'css/profile.css'%}">
+   </head>
+        <div class='profile-container'>
+            <div class='flex_row'>
+                <div class="profileImg">
+                <img src=
+                    {% if user.profile.profileImg%} 
+                        "{{user.profile.profileImg.url}}"
+                    {% else %}
+                        "{% static 'img/potato.png' %}"
+                    {% endif %}
+                >
+            </div>
+                <div class="edit_ImgContainer">
+                    <form action="{% url "edit_profileImg" %}" enctype="multipart/form-data" method="post">
+                        {%csrf_token%}
+                        <label for="filebtn" class="editBtn"><b> 프로필 사진 바꾸기</b> </label>
+                        <input type="file" accept="image/jpeg,image/png" name="image" style="display:none" id="filebtn">
+                        <button type="submit" class="submitbtn">변경</button>   
+                    </form>
+                </div>
+                <div class="edit_Info">
+                     <form method ="POST" action="{% url "editProfileInfo"%}">
+                         {%csrf_token%}
+                        <div class="info">
+                            <input name="name" type="text" class="info-item" 
+                                style=height:30px; placeholder="이름" value={{user.profile.name}} >
+                            <textarea name="intro"  rows="2"  class="info-item" placeholder="사용자 소개">{{user.profile.intro}}</textarea>
+                        </div>
+                        <button type="submit" class="submitbtn" >제출</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+ {% endblock %}
