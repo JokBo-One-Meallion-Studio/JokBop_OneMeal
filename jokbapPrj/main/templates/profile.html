@@ -9,7 +9,7 @@
         <div class='profile-container'>
             <div class='flex_row'>
                 <img id='profile' src='{% static 'img/potato.png'%} '>
-                <div style="margin-left: 10px;">
+                <div style="margin-left: 10px;" id="profile-name">
                     <div class='flex_row'>
                         <h2>{{user.profile.name}}</h2>
                         <div>(족밥 Lv.8)</div>
@@ -22,26 +22,29 @@
     </a>
     
     <div class='container'>
-        <div class='flex_row space_around'>
+        <div class='flex_row space_around' >
             <h2>매너학점</h2>
             <br>
-            3.8/4.5
+            <div id="grade">
+                3.8/4.5
+            </div> 
         </div>
-        <div class='flex_row' style="justify-content: flex-end;">
-                    <div class='flex_row' style="margin-right: 10px;">  
+        <div class='flex_row' id="feedback-gage" style="width: auto;">
+                    <div class='flex_row' style="margin-right: 10px; float: left;">  
                         <img class='icon' src='{% static 'img/comments.svg' %}'>
                         <div class='yellow'>응답률: 80%</div>
                     </div>
-                    <div class='flex_row'>
+                    <div class='flex_row' style="margin-left: 40px; float: right;" >
                         <img class='icon' src='{% static 'img/like.svg '%}'>
-                        <div class='yellow'>재밥약희망률: 89%</div>
+                        <div class='yellow'>또밥률: 89%</div>
                     </div>
         </div>
 
     </div>
     <div class= 'container'>
-        <h2 class="menu">판매족보 : 10개</h2>
-        <h2 class="menu">밥약횟수 : 20회</h2>
+        <h2 class="menu">판매 족보 : 10개</h2>
+        <h2 class="menu">한끼 횟수 : 20회</h2>
+        <h2 class="menu">나의 댓글 : 36개</h2>
     </div>
 
  {% endblock %}
