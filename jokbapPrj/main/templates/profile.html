@@ -3,27 +3,45 @@
 {% block content %}
 <!--html, CSS 수정 필요 !!-->
 <!-- 일단 newBap 복붙 해놓음 임시방편 -->
-    <head>
-        <link type="text/css" rel="stylesheet" href="{% static 'css/create.css'%}">
-        </style>
-    </head>
-    <div class='title-container' > <!--base.css에서 수정-->
-        <h1>
-            밥 작성하기 
-        </h1>    
+   <head>
+    <link rel="stylesheet" href="{% static 'css/profile.css'%}">
+   </head>
+        <div class='profile-container'>
+            <div class='flex_row'>
+                <img id='profile' src='{% static 'img/potato.png'%} '>
+                <div style="margin-left: 10px;">
+                    <div class='flex_row'>
+                        <h2>{{user.profile.name}}</h2>
+                        <div>(족밥 Lv.8)</div>
+                    </div>
+                    <div>{{user.profile.intro}}</div> <!--프로필에서 자기소개 설정하는 부분-->
+                    <a class='edit_profile' href={% url 'myprofile' %}>프로필 수정하기</a>
+                </div>
+            </div>
+        </div>
+    </a>
+    
+    <div class='container'>
+        <div class='flex_row space_around'>
+            <h2>매너학점</h2>
+            <br>
+            3.8/4.5
+        </div>
+        <div class='flex_row' style="justify-content: flex-end;">
+                    <div class='flex_row' style="margin-right: 10px;">  
+                        <img class='icon' src='{% static 'img/comments.svg' %}'>
+                        <div class='yellow'>응답률: 80%</div>
+                    </div>
+                    <div class='flex_row'>
+                        <img class='icon' src='{% static 'img/like.svg '%}'>
+                        <div class='yellow'>재밥약희망률: 89%</div>
+                    </div>
+        </div>
+
     </div>
-    <div id="uploadArea">
-         <form  method="post" action="{% url 'upload_bap' %}" enctype="multipart/form-data">
-             {%csrf_token%}
-             <div class="mb-3">
-                 <!-- <label for="formFile" class="form-label"></label> -->
-                 <input class="form-control" type="file" name= "image" id="formFile">
-             </div>
-             <input name="title" class="signup" type="text" placeholder="제목을 입력해주세요 " required>
-             <textarea name="text" id="" cols="50" rows="10" required></textarea>
-             <button type="submit" class="btn btn-primary">글작성</button>
-         </form>
+    <div class= 'container'>
+        <h2 class="menu">판매족보 : 10개</h2>
+        <h2 class="menu">밥약횟수 : 20회</h2>
     </div>
- 
 
  {% endblock %}

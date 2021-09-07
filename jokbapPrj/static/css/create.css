@@ -147,3 +147,55 @@ a:hover {
   padding-top:80px;
   padding-bottom: 15px;
 }
+
+.uploadArea{
+  font-family: "Noto Sans KR", sans-serif;
+  width: 327px;
+  height: 45px;
+  padding-left: 5px;
+  padding-right: 5px;
+  display: flex;
+  flex-flow: row;
+  box-sizing: border-box;
+}
+
+
+.form-control{
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.signup{
+  width: 312px;
+  height: 16px;
+  font-size: large;
+  border-color: #dbdbdb;
+  border-style: solid;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-family: "Noto Sans KR", sans-serif;
+  padding: 10px 0 10px 0;
+  background-color: transparent;
+}
+
+.btn-primary{
+  float: right;
+  font-family: "Noto Sans KR", sans-serif;
+  width: 88px;
+  height: 32px;
+  font-size: 12pt;
+  border-radius: 10px;
+  border: none;
+  margin-top: 20px;
+}
+
+#newpost{
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 12pt;
+  width: 306px;
+  height: 312px;
+  border: none;
+  padding: none;
+}

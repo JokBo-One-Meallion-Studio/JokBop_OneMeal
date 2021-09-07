@@ -1,0 +1,46 @@
+.profile-container{
+    padding-top:70px;
+    padding-bottom:15px;
+    box-sizing: border-box;
+    border-bottom:solid 2px #ededed;
+  }
+  .container {
+    
+    padding-top: 10px;
+    padding-bottom: 15px;
+    box-sizing: border-box;
+  }
+  h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  h2 {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  h3 {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  .flex_row {
+    display: flex;
+    flex-flow: row;
+    align-items: flex-end;
+  }
+  #profile {
+    width: 60px;
+  }
+  .go_profile {
+  
+    border: solid 2px #ededed;
+  }
+  .menu{
+      margin:10px;
+      border:solid 2px #ededed;
+  }

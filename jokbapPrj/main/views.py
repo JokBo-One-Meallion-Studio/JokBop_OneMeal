@@ -97,11 +97,12 @@ def b_comment(request, b_id):
     return render(request, 'Content_Bap.html', {"post":related_post, "comments": updated_comments})
 
 #프로필 구현부
+def myProfile(request):
+    user= request.user
+    return render(request,'profile.html')
+
 def profile(request,author_id):
     author= get_object_or_404(User, pk=author_id)
     return render(request, 'profile.html',{'author':author}) 
 
 
-def myProfile(request):
-    user= request.user
-    return render(request,'profile.html')

@@ -73,8 +73,9 @@ a:hover {
   justify-content: space-between;
 }
 
-.yellow {
-  color: #fbc93b;
+.go_profile {
+  
+  border: solid 2px #ededed;
 }
 
 .dark_gray {

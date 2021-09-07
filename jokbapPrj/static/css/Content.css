@@ -134,6 +134,7 @@ a:hover {
 
 #write_comment{
   padding-left: 15px;
+  margin-bottom:15px;
   width: 280px;
   height: 40px;
   border: 1px none;
@@ -141,25 +142,9 @@ a:hover {
   text-align: justify;
 }
 
-
-
-#footer {
-  margin-top: 20px;
-  text-align: center;
-  color: #dbdbdb;
-}
-
-
 .newCommentBtn{
-  background-image: url('../img/send.svg');
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  width: 22px;
-  margin-top: 9px;
-  margin-bottom: 9px;
+  width: 24px;
+  height:27px;  
+  margin-top:15px;
   align-items: center;
-  cursor:pointer;
-  outline:0;
-  border:0;
-
 }

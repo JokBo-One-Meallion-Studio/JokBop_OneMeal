@@ -4,19 +4,20 @@
 <head>
     <link rel="stylesheet" href="{% static 'css/Home.css'%}">
 </head>
-    <div class='profile-container'>
-        <div class='flex_row'>
-            <img id='profile' src='{% static 'img/potato.png'%} '>
-            <div style="margin-left: 10px;">
-                <div class='flex_row'>
-                    <h2>{{user.profile.name}}</h2>
-                    <div>(족밥 Lv.8)</div>
+        <div class='profile-container'>
+            <div class='flex_row'>
+                <img id='profile' src='{% static 'img/potato.png'%} '>
+                <div style="margin-left: 10px;">
+                    <div class='flex_row'>
+                        <h2>{{user.profile.name}}</h2>
+                        <div>(족밥 Lv.8)</div>
+                    </div>
+                    <div>{{user.profile.intro}}</div> <!--프로필에서 자기소개 설정하는 부분-->
+                    <a class='go_profile' href={% url 'myprofile' %}>프로필 보기</a>
                 </div>
-                <div>{{user.profile.intro}}</div> <!--프로필에서 자기소개 설정하는 부분-->
-                <a class='yellow'>수정하기</a>
             </div>
         </div>
-    </div>
+    </a>
     
     <div class='container'>
         <div class='flex_row space_around'>
