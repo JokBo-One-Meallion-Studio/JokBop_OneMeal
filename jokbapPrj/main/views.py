@@ -85,7 +85,18 @@ def j_comment(request, j_id):
     updated_comments=related_post.J_comments.all()
     return render(request, 'Content_Jok.html', {"post":related_post, "comments": updated_comments})
 
+def b_comment(request, b_id):
+    new_comment=Bob_comment()
+    new_comment.author= request.user
+    new_comment.pub_date= timezone.now()
+    related_post= get_object_or_404(Bob_Post, pk=b_id)
+    new_comment.post= related_post
+    new_comment.text=request.POST['newComment']
+    new_comment.save()
+    updated_comments=related_post.B_comments.all()
+    return render(request, 'Content_Bap.html', {"post":related_post, "comments": updated_comments})
 
+#프로필 구현부
 def profile(request,author_id):
     author= get_object_or_404(User, pk=author_id)
     return render(request, 'profile.html',{'author':author}) 

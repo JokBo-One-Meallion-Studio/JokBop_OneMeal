@@ -134,6 +134,7 @@ a:hover {
 
 #write_comment{
   padding-left: 15px;
+  margin-bottom:15px;
   width: 280px;
   height: 40px;
   border: 1px none;
@@ -141,10 +142,9 @@ a:hover {
   text-align: justify;
 }
 
-#send_icon{
-  width: 22px;
-  margin-top: 9px;
-  margin-bottom: 9px;
+.newCommentBtn{
+  width: 24px;
+  height:27px;  
+  margin-top:15px;
   align-items: center;
 }
-

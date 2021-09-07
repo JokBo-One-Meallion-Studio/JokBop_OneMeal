@@ -66,10 +66,13 @@
     {% endfor %}
     
     
-    
+
     <div class="NewComment">
+         <form class= "comment_form" method="POST" action="{% url 'b_newComment' post.id %}">
+            {% csrf_token %} 
             <input id="write_comment" type="text" name="newComment" placeholder="댓글 입력">
-            <img id="send_icon" src="{% static 'img/send.svg'%}">
+            <input class="newCommentBtn" type="image" src="{% static 'img/send.svg' %}" value="" alt="제출버튼">
+         </form>
     </div>
 
     
