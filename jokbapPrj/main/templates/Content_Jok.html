@@ -70,6 +70,7 @@
     
     <div class="NewComment">
          <form method="POST" action="{% url 'j_newComment' post.id %}">
+            {% csrf_token %} 
             <input id="write_comment" type="text" name="newComment" placeholder="댓글 입력">
             <input class="newCommentBtn" type="submit" value="">
          </form>
