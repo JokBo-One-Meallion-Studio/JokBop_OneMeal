@@ -141,15 +141,25 @@ a:hover {
   text-align: justify;
 }
 
-#send_icon{
-  width: 22px;
-  margin-top: 9px;
-  margin-bottom: 9px;
-  align-items: center;
-}
+
 
 #footer {
   margin-top: 20px;
   text-align: center;
   color: #dbdbdb;
+}
+
+
+.newCommentBtn{
+  background-image: url('../img/send.svg');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  width: 22px;
+  margin-top: 9px;
+  margin-bottom: 9px;
+  align-items: center;
+  cursor:pointer;
+  outline:0;
+  border:0;
+
 }

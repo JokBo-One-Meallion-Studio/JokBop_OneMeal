@@ -1,6 +1,8 @@
 from django.shortcuts import get_object_or_404, render,redirect
 from .models import Bob_Post
 from .models import Jok_Post
+from .models import Jok_comment
+from .models import Bob_comment
 from django.utils import timezone
 from django.contrib.auth.models import User
 
@@ -70,6 +72,19 @@ def b_delete(request, post_id):
     post= get_object_or_404(Bob_Post, pk=post_id)
     post.delete()
     return redirect('b_page')
+
+#댓글 create구현
+def j_comment(request, j_id):
+    new_comment=Jok_comment()
+    new_comment.author= request.user
+    new_comment.pub_date= timezone.now()
+    related_post= get_object_or_404(Jok_Post, pk=j_id)
+    new_comment.post= related_post
+    new_comment.text=request.POST['newComment']
+    new_comment.save()
+    updated_comments=related_post.J_comments.all()
+    return render(request, 'Content_Jok.html', {"post":related_post, "comments": updated_comments})
+
 
 def profile(request,author_id):
     author= get_object_or_404(User, pk=author_id)
