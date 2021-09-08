@@ -7,7 +7,13 @@
 <!--프로필 띄우는 부분 css랑 html 수정 필요-->
     <div class="container">
         <div class="flex_row">
-            <img id="profile" src="{% static 'img/baby.png' %}">
+            <img id='profile' src=
+               			 {% if post.author.profile.profileImg%} 
+                   		 	"{{post.author.profile.profileImg.url}}"
+               			 {% else %}
+                    		"{% static 'img/potato.png' %}"
+                		 {% endif %}
+						 >
             <div style="margin-left: 10px;">
                 <div class='flex_row' style="align-items: flex-end;">
                     <h3>{{post.author.profile.name}}</h3>
@@ -51,7 +57,13 @@
             <div class="container">
                 <div class="flex_row" style="margin-left: 10px;">
                     <div id="comment_img">
-                    <img class="comment_profile" src="{% static 'img/mala.png'%}" alt="chick">
+                        <img id='comment_profile' src=
+               			 {% if comment.author.profile.profileImg%} 
+                   		 	"{{comment.author.profile.profileImg.url}}"
+               			 {% else %}
+                    		"{% static 'img/potato.png' %}"
+                		 {% endif %}
+						 >
                     </div>
                     <div id="comment_text">
                         <div class="flex_row" style="margin-bottom: 2px;">

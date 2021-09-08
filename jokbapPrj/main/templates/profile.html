@@ -8,7 +8,13 @@
    </head>
         <div class='profile-container'>
             <div class='flex_row'>
-                <img id='profile' src='{% static 'img/potato.png'%} '>
+               <img id="profile" src=
+                    {% if user.profile.profileImg %} 
+                        "{{user.profile.profileImg.url}}"
+                    {% else %}
+                        "{% static 'img/potato.png' %}"
+                    {% endif %}
+                    > 
                 <div style="margin-left: 10px;" id="profile-name">
                     <div class='flex_row'>
                         <h2>{{user.profile.name}}</h2>

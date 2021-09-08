@@ -91,3 +91,8 @@
     border: 1px solid gainsboro;
     border-radius: 0.2rem;
   }
+
+  .profile img{
+    width: 60px;
+    height:60px;
+  }
