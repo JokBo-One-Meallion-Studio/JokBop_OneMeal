@@ -9,13 +9,13 @@
         <div class='profile-container'>
             <div class='flex_row'>
                 <div class="profileImg">
-                <img src=
-                    {% if user.profile.profileImg%} 
+                    <img src=
+                    {% if user.profile.profileImg %} 
                         "{{user.profile.profileImg.url}}"
                     {% else %}
                         "{% static 'img/potato.png' %}"
                     {% endif %}
-                >
+                    > 
             </div>
                 <div class="edit_ImgContainer">
                     <form action="{% url "edit_profileImg" %}" enctype="multipart/form-data" method="POST">
@@ -25,6 +25,8 @@
                         <button type="submit" class="submitbtn">변경</button>   
                     </form>
                 </div>
+        </div>      
+        <div class='profile-container2'>
                 <div class="edit_Info">
                      <form method ="POST" action="{% url "editProfileInfo"%}">
                          {%csrf_token%}

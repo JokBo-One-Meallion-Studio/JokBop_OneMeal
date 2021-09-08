@@ -70,3 +70,24 @@
     font-family: "Noto Sans KR", sans-serif;
     font-size: 10pt;
   }
+
+  .profileImg img{
+    width:90px;
+    height:90px;
+    margin-left:10px;
+  }
+  .editBtn{
+    width:30px;
+    height:10px;
+  }
+  .profile-container2{
+    margin-top:30px;
+  }
+  .info-item{
+    margin-bottom:20px;
+    margin-left:10px;
+    display:block;
+    width:260px;
+    border: 1px solid gainsboro;
+    border-radius: 0.2rem;
+  }
