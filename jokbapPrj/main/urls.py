@@ -20,8 +20,4 @@ urlpatterns = [
     path('bpage_content/delete/<int:post_id>',views.b_delete,name='b_delete'),
     path('jpage/<int:j_id>/newComment',views.j_comment,name="j_newComment"),
     path('bpage/<int:b_id>/newComment',views.b_comment,name="b_newComment"),
-
-   
-    
-    
 ]
